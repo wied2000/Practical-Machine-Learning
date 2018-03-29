@@ -43,7 +43,7 @@ length(pml.training.na[ pml.training.na > 1])
 min(pml.training.na[ pml.training.na > 1])
 ```
 
-Then we remove all those 100 columns with NA > 19216 20 for testing
+Then we remove all those 100 columns with NA > 19216 (NA > 20 for pml.testing)
 ```{r remove_NA}
 pml.training <-  pml.training[,pml.training.na < 19216] 
 pml.testing <-  pml.testing[,pml.testing.na < 20] 
@@ -103,6 +103,7 @@ for(i in 1:k){
 ```
 
 The accuracy range
+
 Max:
 ```{r range_max, echo=FALSE}
 max(accuracy)
